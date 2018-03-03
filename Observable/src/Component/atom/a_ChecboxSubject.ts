@@ -1,10 +1,13 @@
+import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/ObserverBooleanInterface";
+import { SubscriberBooleanInterface } from "../../Patterns/ObserverSubscriber/SubscriberBooleanInterface";
 
-import { SubscriberNumberInterface } from '../Patterns/SubscriberNumberInterface';
-import { ObserverNumberInterface } from '../Patterns/ObserverNumberInterface';
 
 
-export class ChecboxSubject implements SubscriberNumberInterface {
-    observers:ObserverNumberInterface[];
+/**
+ * 
+ */
+export class a_ChecboxSubject implements SubscriberBooleanInterface {
+    observers:ObserverBooleanInterface[];
     checked:boolean;
 
 
@@ -17,11 +20,11 @@ export class ChecboxSubject implements SubscriberNumberInterface {
         this.notifyAll();
     }
 
-    subscribe( observer:ObserverNumberInterface ) {
+    subscribe( observer:ObserverBooleanInterface ) {
         this.observers.push( observer );
     }
 
-    unsubscribe( observer:ObserverNumberInterface ) {
+    unsubscribe( observer:ObserverBooleanInterface ) {
         let index = this.observers.indexOf( observer );
         if (index > -1) {
             this.observers.slice(index, 1);

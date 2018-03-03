@@ -13,14 +13,21 @@
     
 </head>
 <body>
-    <label for="checkbox">Enable Stuff: </label><input type="checkbox" id="checkbox" name="checkbox">
-    <br/>
-    <br/>
-    <input type="text" id="message" readonly>
-    <br/>
-    <br/>
-    <button id="messageButton">Submit</button>
-
+    <form action="#" method="post" class="m_signup-form">
+        <p class="m_signup-form__message-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero odio provident. Reiciendis, nihil! Soluta accusantium aut cupiditate quia distinctio ullam architecto, dignissimos illum blanditiis voluptas veniam atque. Ex, maxime.
+                Dicta accusamus, corrupti recusandae placeat molestiae distinctio quod quas fuga aliquam impedit rem obcaecati alias ipsum, doloribus hic excepturi exercitationem quos, repellendus non velit? Consectetur deserunt pariatur accusantium! Officiis, nesciunt.
+                Enim, eveniet fuga. In reprehenderit nemo aliquid sed numquam sit aut dolores sint, optio, ab voluptatem illo? Est tenetur fuga laudantium a. Maiores ipsum eum quos facere laudantium saepe id!                                
+        </p>
+        <label for="m_signup-form__checkbox">Enable Stuff</label>
+        <input type="checkbox" id="m_signup-form__checkbox" name="m_signup-form__checkbox">
+        <br/>
+        <br/>
+        <input type="text" id="m_signup-form__text-edit" class="m_signup-form__text-edit" readonly>
+        <br/>
+        <br/>
+        <button id="m_signup-form__submit" class="m_signup-form__Submit" disabled="disabled">Submit</button>
+    </form>
     <script src="./dist/bundle.js"></script>
 </body>
 </html>
