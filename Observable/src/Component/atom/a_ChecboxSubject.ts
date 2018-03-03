@@ -9,10 +9,12 @@ import { SubscriberBooleanInterface } from "../../Patterns/ObserverSubscriber/Su
 export class a_ChecboxSubject implements SubscriberBooleanInterface {
     observers:ObserverBooleanInterface[];
     checked:boolean;
+    elementReference:any;
 
-
-    constructor() {
+    constructor(elementID:string) {
+        this.elementReference = $( "#"+elementID );
         this.observers = [];
+        this.elementReference.prop("checked", false);
     }
 
     notify(checked:boolean) {

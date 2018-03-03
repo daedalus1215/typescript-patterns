@@ -3,7 +3,7 @@ import { a_TextElementObserver } from "../Component/atom/a_TextElementObserver";
 import { a_SubmitButtonObserver } from "../Component/atom/a_SubmitButtonObserver";
 
 
-var checkboxSubject = new a_ChecboxSubject();
+var checkboxSubject = new a_ChecboxSubject("m_signup-form__checkbox");
 
 var textElementObserver = new a_TextElementObserver("m_signup-form__text-edit");
 var submitButtonObserver = new a_SubmitButtonObserver("m_signup-form__submit");

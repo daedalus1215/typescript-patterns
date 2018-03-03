@@ -8,6 +8,7 @@ import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/Obse
  * Simple Text Element Observer. 
  * If notified true, we make sure we can edit the text element field. 
  * Otherwise we make sure that it is uneditable.
+ * Starts off making the edit text read only, until notified.
  */
 export class a_TextElementObserver implements ObserverBooleanInterface {
     name:string;
@@ -22,6 +23,7 @@ export class a_TextElementObserver implements ObserverBooleanInterface {
         this.name = elementID;
         this.id = elementID;
         this.elementReference = $( "#"+this.id);
+        this.elementReference.prop("readonly", true);
     }
 
 

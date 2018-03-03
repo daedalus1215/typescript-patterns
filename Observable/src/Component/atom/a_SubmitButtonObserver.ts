@@ -4,7 +4,12 @@ import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/Obse
 
 
 
-
+/**
+ * Simple submit button observer. 
+ * By default it starts off disabled.
+ * Only enables when passed true, via notify().
+ * 
+ */
 export class a_SubmitButtonObserver implements ObserverBooleanInterface {
     name:string;
     id:string;
@@ -14,6 +19,7 @@ export class a_SubmitButtonObserver implements ObserverBooleanInterface {
         this.name = elementID;
         this.id = elementID;
         this.elementReference = $( "#"+elementID );
+        this.elementReference.prop("disabled", "disabled");
     }
 
 
