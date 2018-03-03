@@ -1,5 +1,9 @@
-/// <reference path="../../../jquery.d.ts" />
-import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/ObserverBooleanInterface";
+/// <reference path="../../../../jquery.d.ts" />
+import { ObserverBooleanInterface } from "../../../Patterns/ObserverSubscriber/ObserverBooleanInterface";
+
+
+
+
 
 
 
@@ -10,7 +14,7 @@ import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/Obse
  * Only enables when passed true, via notify().
  * 
  */
-export class a_SubmitButtonObserver implements ObserverBooleanInterface {
+export class SubmitButtonObserver implements ObserverBooleanInterface {
     name:string;
     id:string;
     elementReference:any;

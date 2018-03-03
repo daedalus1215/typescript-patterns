@@ -1,12 +1,15 @@
-import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/ObserverBooleanInterface";
-import { SubscriberBooleanInterface } from "../../Patterns/ObserverSubscriber/SubscriberBooleanInterface";
+/// <reference path="../../../../jquery.d.ts" />
+
+
+import { SubscriberBooleanInterface } from "../../../Patterns/ObserverSubscriber/SubscriberBooleanInterface";
+import { ObserverBooleanInterface } from "../../../Patterns/ObserverSubscriber/ObserverBooleanInterface";
 
 
 
 /**
  * 
  */
-export class a_ChecboxSubject implements SubscriberBooleanInterface {
+export class ChecboxSubject implements SubscriberBooleanInterface {
     observers:ObserverBooleanInterface[];
     checked:boolean;
     elementReference:any;

@@ -1,5 +1,6 @@
-/// <reference path="../../../jquery.d.ts" />
-import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/ObserverBooleanInterface";
+/// <reference path="../../../../jquery.d.ts" />
+import { ObserverBooleanInterface } from "../../../Patterns/ObserverSubscriber/ObserverBooleanInterface";
+
 
 
 
@@ -10,7 +11,7 @@ import { ObserverBooleanInterface } from "../../Patterns/ObserverSubscriber/Obse
  * Otherwise we make sure that it is uneditable.
  * Starts off making the edit text read only, until notified.
  */
-export class a_TextElementObserver implements ObserverBooleanInterface {
+export class TextElementObserver implements ObserverBooleanInterface {
     name:string;
     id:string;
     elementReference:any;
