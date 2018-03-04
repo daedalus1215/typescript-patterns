@@ -1,0 +1,98 @@
+.o-signupForm {
+  &__group:not(:last-child) {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+  }
+
+  &__messageBody {
+    font-size: 1.4rem;
+  }
+
+  &__textEdit {
+      outline: none; // make sure that we do not highlight the field when the user selects.
+      color: inherit;
+      font-family: inherit; // Browser's always set the font-family of form elements ot something other than what we set on the body.
+      font-size: 1.5rem;
+      padding: 1.5rem 2rem;
+      border-radius: 2px;
+      background-color: rgba($color-white, 0.5);
+      border: none;
+      border-bottom: 3px solid transparent; // This makes sure that when we focus on the field we do not push the one below it down by 3 px, because of the focus border.
+      width: 90%;
+      display: block;
+      transition: all .3s;
+
+      &:focus {
+          outline: none; // make sure that we do not highlight the field when the user selects.
+          box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+          border-bottom: 3px solid $color-primary; // we set our own manually.
+      
+      }
+
+      &:focus:invalid {
+          outline: none; // make sure that we do not highlight the field when the user selects.
+          border-bottom: 3px solid $color-secondary-dark; // we set our own manually.
+      
+      }
+
+      // pseudo element, not a pseudo class (which are for states, like focus). This makes sure that we make the text as we type darker.
+      &::-webkit-input-placeholder {
+          color: $color-grey-dark-2;
+      }
+  }
+
+  &__label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-left: 2rem;     
+      margin-top: .7rem;
+      display: block;
+      transition: all .3s;
+  }
+
+  //   input's placeholder when it is shown, look to the sibling adjacent element. Sibling selector needs to make sure that it honors the html order of elements.
+  &__textEdit:placeholder-shown + &__label {
+      opacity: 0;
+      visibility: hidden; // cannot animate the visibility, but we can opacity.
+      transform: translateY(-4rem);
+  }
+
+  &__checkbox {
+      display: none;
+  }
+
+  &__checkbox-label {
+      font-size: $default-font-size;
+      cursor: pointer; //make it look like a link or something.
+      position: relative;
+      padding-left: 2rem;
+      margin-right: 1em;
+  }
+
+  &__checkbox {
+      border: 5px solid $color-primary;
+      border-radius: 50%;
+      display: inline-block;
+      top: -.5rem;
+      left: 0;
+
+      &:after {
+          content: "";
+          display: block;
+          height: 1.3rem;
+          width: 1.3rem;
+          border-radius: 50%;
+
+          @include absCenter;
+
+          background-color: $color-primary;
+          opacity: 0;
+          transition: opacity .2s;
+      }
+  }
+
+  // select the input, checked element's sibling label's child's pseudo-after button
+  &__checkbox:checked ~ &__checkbox-label &__checkbox:after {
+      opacity: 1;
+  }
+}

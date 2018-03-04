@@ -1,0 +1,17 @@
+
+
+
+/* Let's to make sure all before and after pseudo elements get the affects too. */
+*,
+*::after,
+*::before {    
+    margin: 0; /* reset the margin and padding so browser's applied padding and margins can be removed. */
+    padding: 0;    
+    box-sizing: inherit; /* box-sizing set in body, and now we force inheritance. */    
+}
+
+
+html {
+    // defines what 1 rem is.
+    font-size: 62.5%; /* Keep the font relative so the user's adjusted browser font size will be considered. Now rems can be used throughout the app cleanly.*/
+}

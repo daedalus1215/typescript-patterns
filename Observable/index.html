@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +9,45 @@
 
     <link rel="stylesheet" href="/dist/styles.css">
 
-    <script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-              crossorigin="anonymous"></script>
-              
-    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
-    <form action="#" method="post" class="o-signupForm">
-        <p class="o-signupForm__messageBody">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero odio provident. Reiciendis, nihil! Soluta accusantium aut cupiditate quia distinctio ullam architecto, dignissimos illum blanditiis voluptas veniam atque. Ex, maxime.
-                Dicta accusamus, corrupti recusandae placeat molestiae distinctio quod quas fuga aliquam impedit rem obcaecati alias ipsum, doloribus hic excepturi exercitationem quos, repellendus non velit? Consectetur deserunt pariatur accusantium! Officiis, nesciunt.
-                Enim, eveniet fuga. In reprehenderit nemo aliquid sed numquam sit aut dolores sint, optio, ab voluptatem illo? Est tenetur fuga laudantium a. Maiores ipsum eum quos facere laudantium saepe id!                                
-        </p>
-        <label for="o-signupForm__checkbox">Enable Stuff</label>
-        <input type="checkbox" id="o-signupForm__checkbox" name="o-signupForm__checkbox" >
-        <br/>
-        <br/>
-        <input type="text" id="o-signupForm__textEdit" class="o-signupForm__textEdit" readonly>
-        <br/>
-        <br/>
-        <button id="o-signupForm__submit" class="o-signupForm__submit" disabled="disabled">Submit</button>
-    </form>
+    <section class="display">
+        <form action="#" method="post" class="o-signupForm">
+            
+          <h2 class="heading-secondary">
+              Signup Form
+          </h2>                          
+                                
+            <div class="o-signupForm__group">
+                <p class="o-signupForm__messageBody">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita libero odio provident. Reiciendis, nihil! Soluta accusantium
+                    aut cupiditate quia distinctio ullam architecto, dignissimos illum blanditiis voluptas veniam atque.
+                    Ex, maxime. Dicta accusamus, corrupti recusandae placeat molestiae distinctio quod quas fuga aliquam
+                    impedit rem obcaecati alias ipsum, doloribus hic excepturi exercitationem quos, repellendus non velit?
+                    Consectetur deserunt pariatur accusantium! Officiis, nesciunt. Enim, eveniet fuga. In reprehenderit nemo
+                    aliquid sed numquam sit aut dolores sint, optio, ab voluptatem illo? Est tenetur fuga laudantium a. Maiores
+                    ipsum eum quos facere laudantium saepe id!
+                </p>
+            </div>
+            <div class="o-signupForm__group">
+                <label class="o-signupForm__checkbox-label" for="o-signupForm__checkbox">Enable Stuff</label>
+                <input type="checkbox" class="o-signupForm__checkbox" id="o-signupForm__checkbox" name="o-signupForm__checkbox">
+            </div>
+            <div class="o-signupForm__group">
+                <input type="text" id="o-signupForm__textEdit" class="o-signupForm__textEdit" readonly>
+            </div>
+            <div class="o-signupForm__group">
+                <button id="o-signupForm__submit" class="o-signupForm__submit a-btn a-btn--green" disabled="disabled">Submit</button>
+            </div>
+        </form>
+    </section>
+
     <script src="./dist/bundle.js"></script>
 </body>
+
 </html>

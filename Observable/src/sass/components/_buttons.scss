@@ -1,0 +1,102 @@
+
+.a-btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s; /* short hand transition for the hover and active*/
+        position: relative; /* This is so we can be in front of our pseudo element (::after) */    
+        font-size: $default-font-size;
+
+        // change for  the <button>< element
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2); /* x y blur color */    
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6); /* increase the element. */
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &:focus {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black,.2);
+    }
+
+    &::after {
+        content: ""; /* in order for a pseudo-element to appear on the page we need to specify it's content property - so it's always necessary. */
+        display: inline-block; /* We want this element to be an inline-block, since the .btn is an inline-element */
+        height: 100%; /* 100% of the button */
+        width: 100%; /* 100% of the button */
+        border-radius: 100px; /* same as the button */
+    
+        /* We do not want the ::after element to be below, but behind it's host element*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /* push us behind our host element */
+        transition: all .4s;
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+        
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s; /* animation-name animation-duration animation-timing animation-delay */
+        animation-fill-mode: backwards; /* Automatically apply the animation (@keyframes) 0% property while in the "delayed" state (induced by sibling animation property) - in this case, we are talking about @keyframes moveInBottom's properties. */
+    }
+}
+
+
+
+
+.a-btn-text {
+    &:link,
+    &:visited {
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 3px;
+        font-size: $default-font-size;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 2rem rgba($color-black, .15);
+        transform: translateY(0);
+    }
+}
